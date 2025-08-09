@@ -3,11 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="
+                width=device-width,
+                user-scalable=no,
+                initial-scale=1.0,
+                maximum-scale=1.0,
+                minimum-scale=1.0
+          ">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/section_grid.css">
+    <link rel="stylesheet" href="styles/section_flexbox.css">
+    <link rel="stylesheet" href="styles/section_position.css">
+    <link rel="stylesheet" href="styles/section_table.css">
+    <link rel="stylesheet" href="styles/section_form.css">
+
     <title>CSS Layout Practice Page</title>
 </head>
 <body>
-    <div></div>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="page-header">
+            <h1>CSS Layout Practice Page</h1>
+            <p>Practice CSS Grid, Flexbox, Positioning, Media Queries, and More!</p>
+        </header>
+
+        <main class="page-main">
+            <!-- CSS Grid Practice Section -->
+            <section class="practice-section" aria-labelledby="grid-practice">
+                <header class="section-header">
+                    <h2 id="grid-practice">
+                        <span class="icon">🔲</span>
+                        CSS Grid Practice
+                    </h2>
+                    <hr>
+                </header>
+
+                <!-- Basic Grid -->
+                <div class="subsection">
+                    <h3>Basic Grid (Auto-fit & Minmax)</h3>
+                    <div class="basic-grid">
+                        <div class="grid-item">Grid Item 1</div>
+                        <div class="grid-item">Grid Item 2</div>
+                        <div class="grid-item">Grid Item 3</div>
+                        <div class="grid-item">Grid Item 4</div>
+                        <div class="grid-item">Grid Item 5</div>
+                    </div>
+                    <div class="basic-grid single-item">
+                        <div class="grid-item">Grid Item 6</div>
+                    </div>
+                </div>
+
+                <!-- Advanced Grid Layout -->
+                <div class="subsection">
+                    <h3>Advanced Grid Layout</h3>
+                    <div class="advanced-grid">
+                        <header class="grid-header">Header (spans 3 columns)</header>
+                        <aside class="grid-sidebar">Sidebar</aside>
+                        <main class="grid-main">Main Content</main>
+                        <aside class="grid-ads">Ads</aside>
+                        <footer class="grid-footer-left">Footer Left</footer>
+                        <footer class="grid-footer-right">Footer Right</footer>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Flexbox Practice Section -->
+            <section class="practice-section" aria-labelledby="flexbox-practice">
+                <header class="section-header">
+                    <h2 id="flexbox-practice">
+                        <span class="icon">📦</span>
+                        Flexbox Practice
+                    </h2>
+                    <hr>
+                </header>
+
+                <!-- Flexible Items -->
+                <div class="subsection">
+                    <h3>Flexible Items</h3>
+                    <div class="flex-container">
+                        <div class="flex-item">Flex Item 1</div>
+                        <div class="flex-item">Flex Item 2</div>
+                        <div class="flex-item">Flex Item 3</div>
+                    </div>
+                </div>
+
+                <!-- Flex Direction & Alignment -->
+                <div class="subsection">
+                    <h3>Flex Direction & Alignment</h3>
+                    <div class="flex-alignment">
+                        <div class="flex-item">Left</div>
+                        <div class="flex-item">Center</div>
+                        <div class="flex-item">Right</div>
+                    </div>
+                </div>
+
+                <!-- Column Layout -->
+                <div class="subsection">
+                    <div class="flex-column">
+                        <div class="flex-item">Column Item 1</div>
+                        <div class="flex-item">Column Item 2</div>
+                        <div class="flex-item">Column Item 3</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Position Practice Section -->
+            <section class="practice-section" aria-labelledby="position-practice">
+                <header class="section-header">
+                    <h2 id="position-practice">
+                        <span class="icon">📍</span>
+                        Position Practice
+                    </h2>
+                    <hr>
+                </header>
+
+                <!-- Sticky Header -->
+                <div class="sticky-header">
+                    Sticky Header (scroll to see effect)
+                </div>
+
+                <!-- Relative Container with Absolute Position -->
+                <div class="relative-container">
+                    Relative Container
+                    <div class="absolute-element">
+                        Absolute Position
+                    </div>
+                </div>
+
+                <p class="notice">Notice the fixed position element in the bottom-right corner!</p>
+            </section>
+
+            <!-- Table Practice Section -->
+            <section class="practice-section" aria-labelledby="table-practice">
+                <header class="section-header">
+                    <h2 id="table-practice">
+                        <span class="icon">📊</span>
+                        Table Practice
+                    </h2>
+                    <hr>
+                </header>
+
+                <!-- Styled Data Table -->
+                <div class="subsection">
+                    <h3>Styled Data Table</h3>
+                    <div class="table-container">
+                        <table class="data-table">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Position</th>
+                                <th>Department</th>
+                                <th>Salary</th>
+                                <th>Status</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>Frontend Developer</td>
+                                <td>Engineering</td>
+                                <td>$75,000</td>
+                                <td><span class="status active">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>UX Designer</td>
+                                <td>Design</td>
+                                <td>$68,000</td>
+                                <td><span class="status active">Active</span></td>
+                            </tr>
+                            <tr>
+                                <td>Mike Johnson</td>
+                                <td>Backend Developer</td>
+                                <td>Engineering</td>
+                                <td>$80,000</td>
+                                <td><span class="status on-leave">On Leave</span></td>
+                            </tr>
+                            <tr>
+                                <td>Sarah Wilson</td>
+                                <td>Product Manager</td>
+                                <td>Product</td>
+                                <td>$90,000</td>
+                                <td><span class="status active">Active</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Responsive Card Layout -->
+                <div class="subsection">
+                    <h3>Responsive Card Layout (Alternative to Tables)</h3>
+                    <div class="card-grid">
+                        <div class="employee-card">
+                            <h4>John Doe</h4>
+                            <p><strong>Position:</strong> Frontend Developer</p>
+                            <p><strong>Department:</strong> Engineering</p>
+                            <p><strong>Salary:</strong> $75,000</p>
+                        </div>
+                        <div class="employee-card">
+                            <h4>Jane Smith</h4>
+                            <p><strong>Position:</strong> UX Designer</p>
+                            <p><strong>Department:</strong> Design</p>
+                            <p><strong>Salary:</strong> $68,000</p>
+                        </div>
+                        <div class="employee-card">
+                            <h4>Mike Johnson</h4>
+                            <p><strong>Position:</strong> Backend Developer</p>
+                            <p><strong>Department:</strong> Engineering</p>
+                            <p><strong>Salary:</strong> $80,000</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Form & Input Practice Section -->
+            <section class="practice-section" aria-labelledby="form-practice">
+                <header class="section-header">
+                    <h2 id="form-practice">
+                        <span class="icon">✏️</span>
+                        Form & Input Practice
+                    </h2>
+                    <hr>
+                </header>
+
+                <form class="practice-form">
+                    <!-- Text Inputs Column -->
+                    <div class="form-column">
+                        <h3>Text Inputs</h3>
+
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" placeholder="Enter your full name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" value="john@example.com" class="teal-border">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" placeholder="Enter password" class="red-border">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" placeholder="+1 (555) 123-4567">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="4" placeholder="Enter your message here..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date">Date</label>
+                            <input type="date" id="date">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="range">Range Slider</label>
+                            <input type="range" id="range" min="0" max="100" value="50" class="range-slider">
+                        </div>
+                    </div>
+
+                    <!-- Select & Options Column -->
+                    <div class="form-column">
+                        <h3>Select & Options</h3>
+
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select id="country">
+                                <option>Select a country</option>
+                                <option>United States</option>
+                                <option>Canada</option>
+                                <option>United Kingdom</option>
+                                <option>Australia</option>
+                            </select>
+                        </div>
+
+                        <fieldset class="form-group">
+                            <legend>Preferred Contact Method</legend>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="contact" value="email">
+                                    <span>Email</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="contact" value="phone">
+                                    <span>Phone</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="contact" value="sms">
+                                    <span>SMS</span>
+                                </label>
+                            </div>
+                        </fieldset>
+
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span>Subscribe to newsletter</span>
+                                </label>
+                                <label class="checkbox-label">
+                                    <input type="checkbox">
+                                    <span>I agree to the terms and conditions</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <!-- Fixed Position Element -->
+    <div class="fixed-help">
+        Fixed
+    </div>
 </body>
 </html>
